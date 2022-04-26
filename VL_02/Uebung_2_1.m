@@ -17,7 +17,7 @@ x_3;
 
 Vec1 = [1 3 6];
 Vec2 = [5 8 9];
-Skalarprodukt = Vec1 * Vec2;
+Skalarprodukt = Vec1 * Vec2'
 Skalarprodukt;
 
 
