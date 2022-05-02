@@ -51,10 +51,6 @@ imcoin_jpg=imread('coin.jpg');
 
 %%
 %Nr.5
-figure('Name','Histogramm der Differenz PNG to JPG','NumberTitle','off');
-Differenz=imcoin-imcoin_jpg; 
-Min_Dif = min(Differenz(:));
-Max_Dif = max(Differenz(:));
+Differenz=imcoin-imcoin_jpg;
 
-subplot(1,2,1); imshow(Differenz,[]);
-subplot(1,2,2); imhist(Differenz);
+
