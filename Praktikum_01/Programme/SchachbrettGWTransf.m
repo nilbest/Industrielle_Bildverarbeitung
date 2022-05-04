@@ -17,20 +17,31 @@ subplot(1,2,2); imhist(imSchachbrett);ylim('auto');
 close all;
 %Nr.2
 
+%Theoretisch nach Folie
+amin = min(imSchachbrett(:));
+amax = max(imSchachbrett(:));
+bmin = 0;
+bmax = 255;
+new_Graustufen_Test = (bmax-bmin)/(amax-amin).*(imSchachbrett-amin)+bmin;
+clear('amin','amax','bmin','bmax');
+
+
+%Eigene Idee (Keine Ahnung warum, Ohne Folie erarbeitet)
 anz_Abstufungen = 16;
 anz_Graustufen = anz_Abstufungen-1; %Da 16 Klötze und einer gleich Weiß
 new_Graustufen = 256/anz_Graustufen/10;
 new_imSchachbrett = imSchachbrett;
+
 [x,y] = size(new_imSchachbrett);
 amin = min(new_imSchachbrett(:));
 amax = max(new_imSchachbrett(:));
-
 
 for i=1:x
     for j=1:y
         new_imSchachbrett(i,j) =(imSchachbrett(i,j)-amin) .* new_Graustufen;
     end
 end
+
 
 %Plotten
 figure('Name','Aufgabe 3: Grauwertskalierung','NumberTitle','off');
