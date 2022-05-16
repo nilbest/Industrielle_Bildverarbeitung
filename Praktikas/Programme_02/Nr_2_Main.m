@@ -4,7 +4,7 @@
 % horizontal_pixels = input("Horizontale Pixel: ");
 
 vertical_pixels=300;
-horizontal_pixels=500;
+horizontal_pixels=600;
 
 M = [zeros(vertical_pixels,horizontal_pixels)];
 

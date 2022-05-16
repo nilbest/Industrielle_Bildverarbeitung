@@ -27,7 +27,7 @@ for r = 1+radiusH:nbRows+radiusH
 end
 imshowpair(im,out,'montage');
 
-% % Filterung mit Matlab:
+% Filterung mit Matlab:
 % outMatlab = imfilter(im,h);
 % figure;
 % subplot(1,3,1); imshow(im);
