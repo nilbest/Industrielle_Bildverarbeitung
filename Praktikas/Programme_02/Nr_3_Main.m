@@ -3,8 +3,9 @@ close all;
 
 Schachbrett = imread('Images/Schachbrett.png');
 
-% Kantenfilter(1,Schachbrett);
+Kantenfilter(1,Schachbrett);
+Kantenfilter(2,Schachbrett);
+Kantenfilter(3,Schachbrett);
 
-filter =    [1 0 -1;1 0 -1;1 0 -1]
-
-filtered_picture_2=imfilter(Schachbrett,filter);
+%Info die Darstellung der Bilder in klein wird je nach größe der Bilder
+%falsch gerendert. Ein manuelles vergrößern / verkleinern der Fenster löst dies!!!
