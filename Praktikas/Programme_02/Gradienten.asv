@@ -10,7 +10,7 @@ Hy=[-1 -2 -1;
 hSize=3;
 
 %%
-%Gradienten Approximaion umständlich mit Schleifen
+%Gradienten Approximaion
         % Dx=Hx * original_picture;
         % Dy=Hy * original_picture;
 % Randerweiterung
@@ -36,7 +36,7 @@ hSize=3;
 %     end
 % end
 
-%Gradienten Betrag & Phase Fehler in der Schleife!!!
+%Gradienten Betrag & Phase
 % for i = 1:nbRows
 %     for j = 1:nbCols
 %         E(i,j) = sqrt((Dx(i,j)^2)+(Dy(i, j)^2));
@@ -44,8 +44,8 @@ hSize=3;
 %     end
 % end
 
-Dx = imfilter(double(original_picture),Hx);
-Dy = imfilter(double(original_picture),Hy);
+Dx = imfilter(original_picture,Hx);
+Dy = imfilter(original_picture,Hy);
 
 E = sqrt(Dx.^2 + Dy.^2);
 phi = atan2(-Dy,Dx);
