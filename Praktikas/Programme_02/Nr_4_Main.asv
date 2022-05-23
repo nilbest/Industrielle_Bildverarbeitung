@@ -1,6 +1,0 @@
-clear; clc;
-close all;
-
-Kreis_img = double(imread('Images/Kreis.png'));
-
-Gradienten(Kreis_img);
