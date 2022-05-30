@@ -1,0 +1,1 @@
+function Bild = matrix_pixel(img,pixel)
