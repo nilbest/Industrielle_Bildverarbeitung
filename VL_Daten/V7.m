@@ -18,6 +18,8 @@ alpha = 0;
 imgC = alpha*imgA + (1-alpha)*imgB;
 subplot(2,2,4); imshow(imgC);
 
+%%
+
 % Binärregionen
 img = im2double(imread('./Images/DominoZimtSmall2.png'));
 img = 1 - img;

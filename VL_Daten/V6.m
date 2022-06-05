@@ -16,14 +16,14 @@ NHOOD = [1 1 1; 1 1 1; 1 1 1];
 SE = strel(NHOOD);
 
 % Opening
-figure;
-subplot(1,4,1); imshow(BW); title("BW");
-BWero = imerode(BW,SE);
-subplot(1,4,2); imshow(BWero); title("BWero = imerode(BW,SE)");
-BWopen = imdilate(BWero,SE);
-subplot(1,4,3); imshow(BWopen); title("BWopen = imdilate(BWero,SE)");
-BWopen2 = imopen(BW,SE);
-subplot(1,4,4); imshow(BWopen2); title("BWopen2 = imopen(BW,SE)");
+% figure;
+% subplot(1,4,1); imshow(BW); title("BW");
+% BWero = imerode(BW,SE);
+% subplot(1,4,2); imshow(BWero); title("BWero = imerode(BW,SE)");
+% BWopen = imdilate(BWero,SE);
+% subplot(1,4,3); imshow(BWopen); title("BWopen = imdilate(BWero,SE)");
+% BWopen2 = imopen(BW,SE);
+% subplot(1,4,4); imshow(BWopen2); title("BWopen2 = imopen(BW,SE)");
 
 % % Closing
 % figure;

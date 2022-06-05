@@ -21,6 +21,8 @@ for r=min_nbRows:max_nbRows
         mittelwert=mean(M);
         standardabweichung=std2(M);
         k = -0.00000001; %k(-1:0) möglich (fast 0 ist optimal)
+        %k = -0;
+        %k = -0.1;
         T = mittelwert+k*standardabweichung;
 
         %Schwellwert
@@ -37,7 +39,33 @@ for r=min_nbRows:max_nbRows
     end
 end
 
-figure('Name','Aufgabe 1: Farbbildverarbeitung Ergebnis','NumberTitle','off'); 
+figure('Name','Aufgabe 2.1: Local Thresholding','NumberTitle','off'); 
 imshowpair(im,imBin,'montage');
-title('Original Bild & Auswahl der Pixel');
+title('Original Bild & Verbessertes Bild');
 
+%%
+%Teil 2
+
+Struct=[0,1,0;
+    1,1,1;
+    0,1,0];
+
+% SE = offsetstrel(Struct);
+% figure('Name','Aufgabe 2.2.1: Local Thresholding','NumberTitle','off'); 
+% subplot(1,3,1); imshow(im); title("Original Bild");
+% subplot(1,3,2); imshow(imBin); title("Verbessertes Bild");
+% BWopen = imerode(imBin,SE);
+% %BWopen = imopen(BWopen1,SE);
+% subplot(1,3,3); imshow(BWopen); title("Verbesserung via Morph");
+
+SE = strel(Struct);
+figure('Name','Aufgabe 2.2.2: Local Thresholding','NumberTitle','off'); 
+subplot(1,3,1); imshow(im); title("Original Bild");
+subplot(1,3,2); imshow(imBin); title("Verbessertes Bild");
+BWopen = imerode(imBin,SE);
+%BWopen = imopen(imBin,SE);
+subplot(1,3,3); imshow(BWopen); title("Verbesserung via Morph");
+
+%Unklar welches besser aussieht!!! 2.2.1 ist dicker und 2.2.2 ist dünner
+%Außerdem ist das halbe morphen gefühlt besser lesbar als das fertige
+%Morphen, hier auskommentiert...
