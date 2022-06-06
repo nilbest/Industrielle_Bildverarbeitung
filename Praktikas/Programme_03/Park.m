@@ -44,13 +44,13 @@ a=192;
 
 for r=1:a
     for c=1:nbCols
-        if (im_Red(r,c) >= 0.9*min_r) && (im_Red(r,c) <= 1.1*min_r)
+        if (im_Red(r,c) >= 0.9*min_r) && (im_Red(r,c) <= 1.1*max_r)
             im_Red(r,c)=blau(1);
         end
-        if (im_Green(r,c) >= 0.9*min_g) && (im_Green(r,c) <= 1.1*min_g)
+        if (im_Green(r,c) >= 0.9*min_g) && (im_Green(r,c) <= 1.1*max_g)
                     im_Green(r,c)=blau(2);
         end
-        if (im_Blue(r,c) >= 0.9*min_b) && (im_Blue(r,c) <= 1.1*min_b)
+        if (im_Blue(r,c) >= 0.9*min_b) && (im_Blue(r,c) <= 1.1*max_b)
                     im_Blue(r,c)=blau(3);
         end
     end
