@@ -24,7 +24,7 @@ back(1025:end,:)=[];
 back(:,1025:end)=[];
 %Back hart abschneiden bei 1024
  
-figure('Name','Test 3','NumberTitle','off'); 
+figure('Name','Aufgabe 1: Affine Transformation','NumberTitle','off'); 
 imshow(back,[]);
 title('Original Bild & Auswahl der Pixel');
 
