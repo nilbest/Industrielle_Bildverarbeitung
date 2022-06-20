@@ -20,6 +20,8 @@ im_skaled_rot=imwarp(im_skaled,tform_rot);
 [x, y]=size(im_skaled_rot);
 
 back(x_ver:x_ver+x-1,y_ver:y_ver+y-1)=im_skaled_rot;
+back(1025:end,:)=[];
+back(:,1025:end)=[];
 %Back hart abschneiden bei 1024
  
 figure('Name','Test 3','NumberTitle','off'); 
